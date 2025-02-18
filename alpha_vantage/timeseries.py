@@ -139,7 +139,8 @@ class TimeSeries(av):
                 or 'delayed' for 15-minute delayed US stock market data
         """
         _FUNCTION_KEY = "GLOBAL_QUOTE"
-        return _FUNCTION_KEY, 'Global Quote', None
+        data_key = 'Global Quote - DATA DELAYED BY 15 MINUTES' if entitlement == 'delayed' else 'Global Quote'
+        return _FUNCTION_KEY, data_key, None
 
     @av._output_format
     @av._call_api_on_func

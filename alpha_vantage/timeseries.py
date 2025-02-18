@@ -125,9 +125,8 @@ class TimeSeries(av):
 
         """
         _FUNCTION_KEY = "TIME_SERIES_MONTHLY_ADJUSTED"
-        data_key = 'Monthly Adjusted Time Series'
-        return _FUNCTION_KEY, data_key, None
-        
+        return _FUNCTION_KEY, 'Monthly Adjusted Time Series', 'Meta Data'
+
     @av._output_format
     @av._call_api_on_func
     def get_quote_endpoint(self, symbol, entitlement=None):
